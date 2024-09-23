@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 Route::get('/user', [UserController::class, 'index']);
 Route::get('/user/{id}', [UserController::class, 'getUser']);
+Route::get('/payment/{type}', [UserController::class, 'getPayment']);

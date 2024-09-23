@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
+
+use App\AdapterPattern\PaymentProcessor;
 use App\DecoratorPattern\FreeUser;
 use App\DecoratorPattern\PremiumUser;
 use App\DecoratorPattern\Repository\CacheUserRepositoryDecorated;
@@ -24,5 +27,14 @@ class UserController extends Controller
         $userRepository=resolve(UserRepository::class);
         $userCacheRepo=new CacheUserRepositoryDecorated($userRepository);
         return $userCacheRepo->getUserById($id);
+    }
+    public function getPayment($type)
+    {
+        $namespace='\\App\\AdapterPattern\\PaymentGateway\\';
+        $paymentTypes = ['paypal'=>'Paypal', 'stripe'=>'Stripe'];
+        $payment= new PaymentProcessor();
+        $className = $namespace . $paymentTypes[$type] . 'Adapter';
+        $paymentType = new $className();
+        return $payment->processPayment($paymentType,100);
     }
 }
