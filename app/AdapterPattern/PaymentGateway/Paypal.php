@@ -8,4 +8,9 @@ class Paypal
   {
       return "Paypal payment of $amount";
   }
+  public function sendAmount($amount): string
+  {
+      return "Paypal payment of $amount";
+  }
+
 }
