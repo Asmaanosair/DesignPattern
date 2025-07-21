@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DiscountController;
+use App\Http\Controllers\PaymentProcessController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +23,4 @@ Route::get('/user', [UserController::class, 'index']);
 Route::get('/user/{id}', [UserController::class, 'getUser']);
 Route::get('/payment/{type}', [UserController::class, 'getPayment']);
 Route::get('/discount', [DiscountController::class, 'getDiscount']);
+Route::get('/payment-process', [PaymentProcessController::class, 'paymentProcess']);

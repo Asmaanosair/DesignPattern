@@ -11,7 +11,6 @@ class DiscountController extends Controller
           $discountType=$request->type;
           $discount=$request->discount;
           $strategy = DiscountFactory::getDiscountType($discountType);
-          dd($strategy->discount($discount));
           return $strategy->discount($discount);
       }
 }
