@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MixAdaptorStrategyDecorator;
+namespace App\PaymentModule;
 
 interface PaymentInterface
 {

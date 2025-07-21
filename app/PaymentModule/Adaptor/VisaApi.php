@@ -1,6 +1,6 @@
 <?php
 
-namespace App\MixAdaptorStrategyDecorator\Adaptor;
+namespace App\PaymentModule\Adaptor;
 
 class VisaApi
 {

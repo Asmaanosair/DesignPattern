@@ -1,13 +1,13 @@
 <?php
 
-namespace App\MixAdaptorStrategyDecorator;
+namespace App\PaymentModule;
 
 use App\AdapterPattern\PaymentInterface;
-use App\MixAdaptorStrategyDecorator\Adaptor\BankTransferAdaptor;
-use App\MixAdaptorStrategyDecorator\Adaptor\FawrySDKAdaptor;
-use App\MixAdaptorStrategyDecorator\Adaptor\VisaAdaptor;
-use App\MixAdaptorStrategyDecorator\Startegy\CashPayment;
-use App\MixAdaptorStrategyDecorator\Startegy\OnlinePayment;
+use App\PaymentModule\Adaptor\BankTransferAdaptor;
+use App\PaymentModule\Adaptor\FawrySDKAdaptor;
+use App\PaymentModule\Adaptor\VisaAdaptor;
+use App\PaymentModule\Startegy\CashPayment;
+use App\PaymentModule\Startegy\OnlinePayment;
 
 class PaymentFactory
 {

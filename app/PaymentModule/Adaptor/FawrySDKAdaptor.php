@@ -1,8 +1,8 @@
 <?php
 
-namespace App\MixAdaptorStrategyDecorator\Adaptor;
+namespace App\PaymentModule\Adaptor;
 
-use App\MixAdaptorStrategyDecorator\PaymentInterface;
+use App\PaymentModule\PaymentInterface;
 
 class FawrySDKAdaptor implements PaymentInterface
 {

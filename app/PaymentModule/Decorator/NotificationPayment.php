@@ -1,8 +1,8 @@
 <?php
 
-namespace App\MixAdaptorStrategyDecorator\Decorator;
+namespace App\PaymentModule\Decorator;
 
-use App\MixAdaptorStrategyDecorator\PaymentInterface;
+use App\PaymentModule\PaymentInterface;
 
 class NotificationPayment implements PaymentInterface
 {

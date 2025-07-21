@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\MixAdaptorStrategyDecorator\Decorator\NotificationPayment;
-use App\MixAdaptorStrategyDecorator\PaymentFactory;
+use App\PaymentModule\Decorator\NotificationPayment;
+use App\PaymentModule\PaymentFactory;
 use Illuminate\Http\Request;
 
 class PaymentProcessController extends Controller

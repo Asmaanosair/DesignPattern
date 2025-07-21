@@ -1,8 +1,8 @@
 <?php
 
-namespace App\MixAdaptorStrategyDecorator\Startegy;
+namespace App\PaymentModule\Startegy;
 
-use App\MixAdaptorStrategyDecorator\PaymentInterface;
+use App\PaymentModule\PaymentInterface;
 
 class OnlinePayment implements PaymentInterface
 {
