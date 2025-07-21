@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\StrategyPattern\hasDiscountStrategies;
+use App\StrategyPattern\DiscountFactory;
 use Illuminate\Http\Request;
 
 class DiscountController extends Controller
 {
-    use HasDiscountStrategies;
       public function getDiscount(Request $request){
           $discountType=$request->type;
           $discount=$request->discount;
-          $strategy = $this->getDiscountType($discountType);
+          $strategy = DiscountFactory::getDiscountType($discountType);
+          dd($strategy->discount($discount));
           return $strategy->discount($discount);
       }
 }

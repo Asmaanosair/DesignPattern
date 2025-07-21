@@ -8,6 +8,6 @@ class PercentDiscount implements DiscountStrategy
 {
    public function discount($discount)
    {
-       return $discount*0.1;
+       return "Precent Discount : " . $discount*0.1;
    }
 }

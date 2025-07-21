@@ -6,10 +6,10 @@ use App\StrategyPattern\DiscoutBehavior\FixedDiscount;
 use App\StrategyPattern\DiscoutBehavior\PercentDiscount;
 use http\Exception\InvalidArgumentException;
 
-trait HasDiscountStrategies
+class DiscountFactory
 {
 
-    public function getDiscountType(int $discountType) : DiscountStrategy
+    static public function getDiscountType(int $discountType) : DiscountStrategy
     {
         return match ($discountType) {
             0 => new FixedDiscount(),
